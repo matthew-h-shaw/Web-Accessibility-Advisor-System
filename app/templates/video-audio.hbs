@@ -1,0 +1,52 @@
+{{page-title "VideoAudio"}}
+
+<Accesibillity-sub-sec @title="Audio-only and Video-only Content" @info="Content such as this only has one way of being interpreted by itself, either audio only or video only and must have another way of being received by users such as a text Alternative and text description. This does not apply in situations of it being an alternative to other content however should be clearly labelled as such. In these situations, alternatives should be provided giving equivalent content. There should also be low or no background audio on audio-only clips. " @good="When a clear and descriptive Textual description or dialouge is provided for all audio-only and video-only content." @bad="When insufficient or no textual description or dialouge is provided for any audio-only or video-only content.">
+	<a href="https://www.w3.org/TR/WCAG21/#non-text-content" class="wcag-link" target=”_blank”>1.1.1</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded" class="wcag-link" target=”_blank”>1.2.1</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded" class="wcag-link" target=”_blank”>1.2.3</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded" class="wcag-link" target=”_blank”>1.2.5</a>
+	<a href="https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded" class="wcag-link" target=”_blank”>1.2.8</a>
+	<a href="https://www.w3.org/TR/WCAG21/#low-or-no-background-audio" class="wcag-link" target=”_blank”>1.4.7</a>
+</Accesibillity-sub-sec>
+
+<Accesibillity-sub-sec @title="Synchronised Media (Audio & Video)" @info="Content with both audio and video should include alternatives to cater for both visual and auditory issues. This should include captions for audio and text description. These must be correctly synchronised with audio. When content is Live captions should also be provided. For Video content an audio description or other suitable description must be provided where relevant to ensure visual content can be provided in another way. Where possible sign language translations should be provided." @good="Textual Descriptions should always be provided (Syncronised correctly with media), and where possible sign language should be provided." @bad="Where no effort is made to allow for sign language on content and insufficient or no textual description is provided for media content.">
+	<a href="https://www.w3.org/TR/WCAG21/#captions-prerecorded" class="wcag-link" target=”_blank”>1.2.2</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded" class="wcag-link" target=”_blank”>1.2.3</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded" class="wcag-link" target=”_blank”>1.2.5</a>
+	<a href="https://www.w3.org/TR/WCAG21/#sign-language-prerecorded" class="wcag-link" target=”_blank”>1.2.6</a>
+	<a href="https://www.w3.org/TR/WCAG21/#extended-audio-description-prerecorded" class="wcag-link" target=”_blank”>1.2.7</a>
+	<a href="https://www.w3.org/TR/WCAG21/#media-alternative-prerecorded" class="wcag-link" target=”_blank”>1.2.8</a>
+</Accesibillity-sub-sec>
+
+<Accesibillity-sub-sec @title="Live Video & Audio Content" @info="Live content can prove to be unpredictable on a webpage. This however does not mean it should not be accessible. Captions for audio must be provided for live content. This can be with pre-planned transcripts, live transcripts or auto generated transcripts." @good="When suitable transcripts are provided alongside live media content" @bad="When insufficient or no transcripts are provided for live media content">
+	<a href="https://www.w3.org/TR/WCAG21/#captions-live" class="wcag-link" target=”_blank”>1.2.4</a>
+	<a href="https://www.w3.org/TR/WCAG21/#audio-only-live" class="wcag-link" target=”_blank”>1.2.9</a>
+</Accesibillity-sub-sec>
+
+
+{{outlet}}
+
+
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>

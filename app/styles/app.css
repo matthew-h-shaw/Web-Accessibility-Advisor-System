@@ -1,0 +1,270 @@
+html,body{
+overflow:auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px white; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgrey; 
+}
+
+*{
+  margin:0;
+}
+html{
+  height: 100%;
+  background: rgb(111,0,143);
+  background: linear-gradient(155deg, rgba(111,0,143,1) 0%, rgba(9,9,121,1) 47%, rgba(255,102,0,1) 100%);
+  font-family: 'Roboto Slab', serif;
+  background-repeat: no-repeat;
+      background-attachment: fixed;
+
+}
+img{
+  max-width: 100%;
+}
+
+body{
+  background-color: transparent;
+  height:100%;
+}
+h1{
+  margin:0;
+  padding: 1% ;
+}
+
+h1 a{
+  color: white;
+  background-color: transparent;
+  
+  text-decoration:  none;
+}
+h1 a:hover{
+  color: black;
+  text-decoration: underline;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -75px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, .push {
+    height: 75px; 
+    
+}
+.footer-button:link, .footer-button:visited {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  float: right;
+  padding: 0.3em 0.6em;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  margin: 1%;
+  font-size: 120%;
+  text-decoration:  none;
+}
+.footer-button:hover, .footer-button:active {
+  color: black;
+  border-color: black;
+  text-decoration: underline;
+}
+
+.main-content{
+  width : 75%;
+  margin: auto;
+}
+
+.flex-container {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+}
+
+.AccesibilitySec {
+  background-color: #f1f1f1;
+  padding: 1%;
+  margin: 2% auto;
+  min-width : 432px;
+  width : 30%;
+  max-width : 30%;
+  min-height: 60%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.AccesibilitySec a{
+    color: black;
+    text-decoration:  none;
+
+}
+.AccesibilitySec h2{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.AccesibilitySec a:hover{
+  color: blue;
+  text-decoration: underline;
+
+}
+
+.section-image{
+  width:  100%;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+
+
+.collapsible {
+  background-color: #0a0979;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-style: solid;
+  border-width: 0.4em;
+  border-radius: 5px;
+  border-color: white;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.collapsible:hover {
+  text-decoration: underline;
+}
+
+.dropcontent {
+  padding: 10px 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.practice-container{
+  background-color: #f1f1f1;
+  padding: 2%;
+  min-width: 45%;
+  max-width: 550px;
+  margin: 2% auto;
+  border: 2px solid black;
+  border-radius: 5px;
+
+}
+
+.wcag-link:link, .wcag-link:visited {
+  background-color: transparent;
+  color: black;
+  padding: 0.3em 0.6em;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 1%;
+  font-size: 120%;
+  text-decoration:  none;
+}
+.wcag-link:hover, .wcag-link:active {
+  color: blue;
+  border-color: blue;
+  text-decoration: underline;
+}
+
+.Acc-Sub-Sec{
+  margin-bottom: 2%;
+}
+
+
+.helpbox {
+  padding: 10px 18px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+
+
+@media only screen and (max-width: 1700px) {
+  .main-content{
+    width : 80%;
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .main-content{
+    width : 85%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .main-content{
+    width : 90%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .main-content{
+    width : 95%;
+  }
+  .practice-container{
+  min-width: 40%;
+  
+}
+  
+}
+
+@media only screen and (max-width: 1300px) {
+  .practice-container{
+  min-width: 30%;
+  
+}
+h1{
+  margin:   2%;
+}
+
+@media only screen and (max-width: 800px) {
+  .practice-container{
+  min-width: 95%;
+} 
+}
+
+@media only screen and (max-width: 500px) {
+.AccesibilitySec {
+  min-width : 95%;
+}
+h1{
+  margin:   3%;
+}
+}
+

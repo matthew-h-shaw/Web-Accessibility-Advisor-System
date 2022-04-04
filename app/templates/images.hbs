@@ -1,0 +1,36 @@
+{{page-title "Images"}}
+
+<Accesibillity-sub-sec @title="How to choose Images" @info="Images should not contain large amounts of text or information as these cannot be interpreted by screen readers and other assistive technologies. Images of text also can cause scale issues across different devices. Images of text should never be used" @good="Image 1:<br><br>This first image is decorative, it gives asthetic benifit to a user however no page content would be lost if this was removed.<br><br><img src='../assets/images/goodDI.jpg' alt='An example of a decorative Image'><br><br>Image 2:<br><br>Although this image contains text, this is short and very easily substituted with alternative text.<br><br><img src='../assets/images/sheffhlmLogo.png' alt='Sheffield Hallam University'>" @bad="Image 1:<br><br>The image below contains a lange amount of text information, this is extremely inaccessible as could rarely be read by an able bodied reader when magnified.<br><br><img src='../assets/images/badImage.png' alt='Inaccessible image showing a leaflet with large quantities of small text and diagrams'>">
+	<a href="https://www.w3.org/TR/WCAG21/#images-of-text" class="wcag-link" target=”_blank”>1.4.5</a>
+	<a href="https://www.w3.org/TR/WCAG21/#images-of-text-no-exception" class="wcag-link" target=”_blank”>1.4.9</a>
+</Accesibillity-sub-sec>
+<Accesibillity-sub-sec @title="Alternative Text" @info="The purpose of accessibility is to ensure all content can be accessed by all people; in the context of images this can be done by ensuring all images used provide suitable text alternatives. This means alternative text must be a suitable substitution for whatever the image contains. This allows for users who cannot view the image but do have access to the alternative text to have equal access to the provided content.<br>If an image is being used as a link it must have alternative text, however it is usually best practice where possible to use text links instead. If an image is purely decorative or contains a suitable caption, alternative text should be left blank." @good="Image 1:<br><br><img src='../assets/images/sheffhlmLogo.png' alt='Sheffield Hallam University'><br><br>Alternative Text = 'Sheffield Hallam University'<br><br>This is correct as it substitutes all relevant content displayed by the image." @bad="Image 1:<br><br><img src='../assets/images/goodDI.jpg' alt='An example of a decorative Image'><br><br>Alternative Text = 'Woman Surrounded by Books'<br><br>This text is incorrect as it should be left blank. No relevant content is added to the page by this image as it is purely decorative. The alternative text should reflect that.">
+	<a href="https://www.w3.org/TR/WCAG21/#non-text-content" class="wcag-link" target=”_blank”>1.1.1</a>
+</Accesibillity-sub-sec>
+{{outlet}}
+
+
+
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>

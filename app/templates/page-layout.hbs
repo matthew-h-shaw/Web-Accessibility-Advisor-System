@@ -1,0 +1,43 @@
+{{page-title "PageLayout"}}
+<Accesibillity-sub-sec @title="Page Content Order" @info="It is vital the order of all content is meaningful, correct, and unaltered by page styling. This can be done by ensuring a completed page has a understandable flow of content starting with the beginning of the subject of the page and ending with the end of the subject." @good="Making a Cup of Tea<br>Step 1: Boil Your Kettle<br>Step 2: Place your teabag in your Mug<br>Step 3: Pour your boiling water into the Mug<br>Step 4: Allow the Tea 1 Minute to Brew<br>Step 5: Remove your Teabag<br>Step 6: Add Milk and Sugar<br>Step 7 : Stir well and Enjoy" @bad="Making a Cup of Tea<br>Step 1: Boil Your Kettle<br>Step 2: Allow the Tea 1 Minute to Brew<br>Step 3: Pour your boiling water into the Mug<br>Step 4: Stir Well and Enjoy<br>Step 5: Remove your Teabag<br>Step 6: Add Milk and Sugar<br>Step 7 : Place your teabag in your Mug">
+	<a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence" class="wcag-link" target=”_blank”>1.3.2</a>
+</Accesibillity-sub-sec>
+<Accesibillity-sub-sec @title="Headings & Labels" @info="When designing the structure of a page it is vital headings are used correctly. Every page and topic section must have a suitable heading. The main purpose of headings is to segment content on a page, this is helpful for assistive technology as it can allow users to skip to sections rather than having to consume all content on the page. It is important all headings are clear and concise. This must be thought of as a hierarchy. A ‘Heading 1’ must always be used and followed by a ‘heading 2’ and ‘3’ where relevant." @good="<ul><li>Heading 1<ul><li>Heading 2<ul><li>Heading 3</li><li>Heading 3</li></ul></li><li>Heading 2<ul><li>Heading 3<ul><li>Heading 4</li></ul></li></ul></li></ul></li></ul>" @bad="<ul><li>Heading 1<ul><li>Heading 2<ul><li><ul><li>Heading 4</li></ul></li><li>Heading 3<ul><li><ul><li>Heading 5</li></ul></li></ul></li><li>Heading 3</li></ul></li><li>Heading 2</li></ul></li></ul>">
+	<a href="https://www.w3.org/TR/WCAG21/#page-titled" class="wcag-link" target=”_blank”>2.4.2</a>
+	<a href="https://www.w3.org/TR/WCAG21/#headings-and-labels" class="wcag-link" target=”_blank”>2.4.6</a>
+	<a href="https://www.w3.org/TR/WCAG21/#section-headings" class="wcag-link" target=”_blank”>2.4.10</a>
+</Accesibillity-sub-sec>
+<Accesibillity-sub-sec @title="Identification Consistency" @info="Page elements such as links, interactive elements and headings should all have consistent identification if they have the same purpose. This means you should never have multiple elements that complete the same function under different identities. " @good="Page 1:<br>Next Page -><br><br>Page 2:<br>Next Page ->" @bad="Page 1:<br>Go to Page 2-><br><br>Page 2:<br>Next Page-><br>">
+	<a href="https://www.w3.org/TR/WCAG21/#consistent-identification" class="wcag-link" target=”_blank”>3.2.4</a>
+</Accesibillity-sub-sec>
+<Accesibillity-sub-sec @title="Page Help" @info="Detailed help and instructions should be provided for every site page. This should relate to the page context. This could be done via a help link, help assistant on the webpage or any other assistive technique relevant to the content on the page." @good="See the bottom of this page!<br>The 'Help & About' button links to a page which satisfies this accesibility point." @bad="When no spercific help link or information is provided on all webpages.">
+	<a href="https://www.w3.org/TR/WCAG21/#help" class="wcag-link" target=”_blank”>3.3.5</a>
+</Accesibillity-sub-sec>
+
+
+
+
+{{outlet}}
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>

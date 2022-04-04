@@ -1,0 +1,41 @@
+<style type="text/css">
+	mark{
+		background-color: chartreuse;
+	}
+</style>
+<Accesibillity-sub-sec @title="Using Colours as Indicators" @info="Colour must be used very carefully within page content, it should purely be used for design purposes, this means when used as an indicator suitable text must also be used to identify the purpose in the difference of colour." @good="Math Questions:<br><mark>1+1 = 2 : Correct!</mark><br>2+3 = 4<br><mark>4+4 = 8 : Correct!</mark><br>8-2 = 4<br>Total 2/4" @bad="Math Questions:<br>Correct answers are shown in green!<br><mark>1+1 = 2</mark><br>2+3 = 4<br><mark>4+4 = 8</mark><br>8-2 = 4<br>Total 2/4">
+	<a href="https://www.w3.org/TR/WCAG21/#use-of-color" class="wcag-link" target=”_blank”>1.4.1</a>
+</Accesibillity-sub-sec>
+
+
+<Accesibillity-sub-sec @title="Image, Text, and Background Colours" @info="For users with visual issues, it is important to ensure a clear contrast between colours. This should be a ratio of 4.5:1 between text and background (if possible 7:1) and 3:1 in elements and their adjacent colours. This can be checked with <a href='https://webaim.org/resources/contrastchecker/'>Web AIM Contrast Checker</a>." @good="<img src='../assets/images/goodcontrast.png' alt='Image shows a good contrast of 4.5:1'><br><br>This shows a good contrast, this site also adheres to colour contrasting rules." @bad="<img src='../assets/images/badcontrast.png' alt='Image shows poor and very poor contrast examples of 3.66:1 and 2.78:1 relitively'><br><br>This shows poor contrast, this makes content difficult to see on a site.">
+	<a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" class="wcag-link" target=”_blank”>1.4.3</a>
+	<a href="https://www.w3.org/TR/WCAG21/#contrast-enhanced" class="wcag-link" target=”_blank”>1.4.6</a>
+	<a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" class="wcag-link" target=”_blank”>1.4.11</a>
+</Accesibillity-sub-sec>
+
+
+
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>

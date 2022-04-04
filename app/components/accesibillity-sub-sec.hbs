@@ -1,0 +1,21 @@
+<div class="Acc-Sub-Sec">
+<button type="button" class="collapsible"><h2>{{@title}}</h2></button>
+<div class="dropcontent">
+	<p class="text">{{@info}}</p>
+	<div class="flex-container">
+		<div class="practice-container">
+			<h3>Good Practice</h3>
+			<p class="text">{{@good}}</p>
+		</div>
+		<div class="practice-container">
+			<h3>Bad Practice</h3>
+			<p class="text">{{@bad}}</p>
+		</div>
+	</div>
+	<div class="flex-container">
+		<h3>Relevant WCAG Section(s):</h3>
+		{{yield}}
+	</div>
+</div>
+</div>
+

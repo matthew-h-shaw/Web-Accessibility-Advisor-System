@@ -1,0 +1,35 @@
+{{page-title "ContentReadabilityText"}}
+
+<Accesibillity-sub-sec @title="Technical words/language" @info="Content using technical language is not always accessible to people of varied reading ability or limited subject knowledge. To improve the accessibility of this, simplifications should be used, or definitions of technical terms should be provided where possible. Where abbreviations are used the full definition should also be provided. The reading level of content should be no higher than secondary educational level or a lower reading level version of content should be provided. Where possible the pronunciation of ambiguous words should be provided if this cannot be implied from context." @good="'Newton's second law is a quantitative description of the changes that a force can produce on the motion of a body. It states that the time rate of change of the momentum of a body is equal in both magnitude and direction to the force imposed on it.'<br><br>Quantitative – numerical measure or value (e.g 25 kilograms)<br>Force - strength or energy as an attribute of physical action or movement<br>Motion of a body - the action or process of moving or of changing place or position.<br>Momentum - he quantity of motion of a moving body, measured as a product of its mass and velocity.<br>Magnitude - the great size or extent of something." @bad="'Newton's second law is a quantitative description of the changes that a force can produce on the motion of a body. It states that the time rate of change of the momentum of a body is equal in both magnitude and direction to the force imposed on it.'">
+	<a href="https://www.w3.org/TR/WCAG21/#unusual-words" class="wcag-link" target=”_blank”>3.1.3</a>
+	<a href="https://www.w3.org/TR/WCAG21/#abbreviations" class="wcag-link" target=”_blank”>3.1.4</a>
+	<a href="https://www.w3.org/TR/WCAG21/#reading-level" class="wcag-link" target=”_blank”>3.1.5</a>
+	<a href="https://www.w3.org/TR/WCAG21/#pronunciation" class="wcag-link" target=”_blank”>3.1.6</a>
+</Accesibillity-sub-sec>
+
+
+{{outlet}}
+
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>

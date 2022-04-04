@@ -1,0 +1,50 @@
+{{page-title "GeneralElementsLinks"}}
+
+<Accesibillity-sub-sec @title="General Links" @info="All links on a page, regardless of their form (e.g. text, image…), should show a clear and unique description of the links purpose. For web links this does not mean using the URL text as using this directly on the page display can be problematic for some assistive technology." @good="Link 1:<br><br>Go to <a href='https://www.google.co.uk/maps'>Google Maps</a>.<br><br>This link clearly states its intention in a simple format." @bad="Link 1:<br><br><a href='https://www.google.co.uk/maps'>Click Here</a><br><br>Although short, this link provides no contect to its heading.<br><br>Link 2:<br><br><a href='https://www.google.co.uk/maps'>https://www.google.co.uk/maps</a><br><br>Although this shows the lin address, isnt readable and in some situations cannot provide relevant contect for the link heading. This format also can be tenuous when working with assistive technology.">
+	<a href="https://www.w3.org/TR/WCAG21/#link-purpose-in-context" class="wcag-link" target=”_blank”>2.4.4</a>
+</Accesibillity-sub-sec>
+
+<Accesibillity-sub-sec @title="Page Link Elements (e.g., Logos, Shapes, etc.)" @info="Links within a page should clearly describe the purpose of the image both with textual description and alternative text where relevant. This allows for a clear understanding of the purpose of a link or page control. Where possible the purpose of all links should be clear from its text." @good="Image 1:<br><br><img src='../assets/images/arrowgood.png' alt='Arrow Shape with text Next Page within'><br><br>This clearly shows the purpose of the shape link via text." @bad="Image 1:<br><br><img src='../assets/images/arrowbad.png' alt='Blank arrow shape'><br><br>This shape does not give any context besides the shape itself to the action it completes.">
+	<a href="https://www.w3.org/TR/WCAG21/#non-text-content" class="wcag-link" target=”_blank”>1.1.1</a>
+	<a href="https://www.w3.org/TR/WCAG21/#sensory-characteristics" class="wcag-link" target=”_blank”>1.3.3</a>	
+	<a href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only" class="wcag-link" target=”_blank”>2.4.9</a>
+</Accesibillity-sub-sec>
+
+<Accesibillity-sub-sec @title="Flashing Content" @info="It is very important to control flashing content on a page, this is due to users with medical conditions such as seizures. For this reason, no page content should flash more than 3 times per second. For obvious reasons only a good example will be shown." @good="Image 1:<br><br><img src='../assets/images/flashingimg.gif' alt='Image that flashes slow enough for accesibillity'><br><br>Although this image flashes it is slow enough and will not cause any accessibility issues." @bad="Any image flashing more than 3 times per second.">
+	<a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold" class="wcag-link" target=”_blank”>2.3.1</a>
+	<a href="https://www.w3.org/TR/WCAG21/#three-flashes" class="wcag-link" target=”_blank”>2.3.2</a>
+</Accesibillity-sub-sec>
+
+<Accesibillity-sub-sec @title="Content Size" @info="Content elements such as images should never have a fixed size. A large, fixed size of elements could cause for the need of unwanted scrolling in either the horizontal or vertical direction. Item size should always be defined as scalable units such as percentages. This allows for a wider range of devices to access the content clearly." @good="Image 1:<br><br><img src='../assets/images/scalecorrect.png' alt='Image showing images on devices that scale according to device size'><br><br>As shown the images on the devices above scale to the device size, allowing for fill visibillity." @bad="Image 1:<br><br><img src='../assets/images/scaleincorrect.png' alt='Image showing images on devices that do not scale according to device size'><br><br>These images maintain their size in pixels allowing them to not be fully shown on smaller or diffrerent sized devices.">
+	<a href="https://www.w3.org/TR/WCAG21/#reflow" class="wcag-link" target=”_blank”>1.4.10</a>
+</Accesibillity-sub-sec>
+
+
+
+
+
+{{outlet}}
+
+
+<script type="text/javascript">
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	console.log(coll);
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var dropcontent = this.nextElementSibling;
+			if (dropcontent.style.display === "block") {
+				dropcontent.style.display = "none";
+			} else {
+				dropcontent.style.display = "block";
+			}
+		});
+	}
+	var text = document.getElementsByClassName("text");
+	var j;
+	console.log(text);
+	for (j = 0; j < text.length; j++) {
+		text[j].innerHTML = text[j].textContent;
+	}
+</script>
